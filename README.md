@@ -58,7 +58,7 @@ In the example below we use Vue; it's assumed you're using a templating language
 
 The module comes with a set of default animations, the animation used is determined by the value of the attribute added to the element.
 
-Movement is achieved using `transform: translate()`. Properties are transitioned using the CSS `transition` property. All transitions use `ease` and a duration of `0.3s`.
+Movement is achieved using `transform: translate()`. Properties are transitioned using the CSS `transition` property. All transitions use `cubic-bezier(0.42, 0, 0.58, 1)` easing and a duration of `0.6s`.
 
 * `fadeIn` - Fades in.
 * `fadeDirectionUp` - Moves up as it fades in.
@@ -71,8 +71,8 @@ Movement is achieved using `transform: translate()`. Properties are transitioned
 Simply add the below CSS for each custom animation you want, replacing `fade` and `opacity` with your own animation name and property to transition.
 
 ```css
-[js-scroll-animation=fade],
-[data-scroll-animation=fade] {
+.sssa-enabled [js-scroll-animation=fade],
+.sssa-enabled [data-scroll-animation=fade] {
   opacity: 0;
   transition: opacity 0.3s ease;
 }

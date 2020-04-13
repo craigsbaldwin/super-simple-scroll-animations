@@ -1,0 +1,28 @@
+{
+  "name": "super-simple-scroll-animations",
+  "version": "0.0.1",
+  "description": "Intersection observer-based CSS scroll animations",
+  "author": "Craig Baldwin",
+  "keywords": [
+    "css",
+    "js",
+    "intersection-observer",
+    "scroll-animations"
+  ],
+  "license": "MIT",
+  "main": "super-simple-scroll-animations.min.js",
+  "jsnext:main": "super-simple-scroll-animations.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csbrightside/super-simple-scroll-animations.git"
+  },
+  "bugs": {
+    "url": "https://github.com/csbrightside/super-simple-scroll-animations/issues"
+  },
+  "homepage": "https://github.com/we-make-websites/branch-naming-check#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -6,6 +6,8 @@ SSSA uses intersection observers to detect when an element becomes visible, addi
 
 ### JavaScript
 
+#### Import
+
 ```js
 import superSimpleScrollAnimations from 'super-simple-scroll-animations';
 
@@ -16,6 +18,14 @@ SSSA accepts two parameters:
 
 * **threshold** - Decimal to indicate at what percentage of the target's visibility the observer's callback should be executed, default `0.3`
 * **detect exit** - When enabled it removes the `is-visible` when the element exits the viewport, default `false`
+
+#### Inline
+
+```html
+<script src="super-simple-scroll-animations.min.js"></script>
+```
+
+Using it inline the parameters will revert to their defaults.
 
 ### HTML
 

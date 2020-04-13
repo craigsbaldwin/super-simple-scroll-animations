@@ -1,0 +1,66 @@
+/**
+ * Helpers: Scroll animation
+ * ------------------------------------------------------------------------------
+ * Animation helpers to apply basic fade-ins.
+ *
+ * - Available animations:
+ * -- fadeIn
+ * -- fadeDirectionUp
+ * -- fadeDirectionDown
+ * -- fadeDirectionLeft
+ * -- fadeDirectionRight
+ *
+ */
+[js-scroll-animation*=fade],
+[data-scroll-animation*=fade] {
+  .sssa-enabled & {
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+}
+
+[js-scroll-animation*=fade].is-visible,
+.is-visible [data-scroll-animation*=fade] {
+  opacity: 1;
+}
+
+[js-scroll-animation*=fadeDirection],
+[data-scroll-animation*=fadeDirection] {
+  .sssa-enabled & {
+    transition: opacity 0.6s cubic-bezier(0.42, 0, 0.58, 1), transform 0.6s cubic-bezier(0.42, 0, 0.58, 1);
+  }
+}
+
+[js-scroll-animation*=fadeDirection].is-visible,
+.is-visible [data-scroll-animation*=fadeDirection] {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+[js-scroll-animation=fadeDirectionUp],
+[data-scroll-animation=fadeDirectionUp] {
+  .sssa-enabled & {
+    transform: translateY(1rem);
+  }
+}
+
+[js-scroll-animation=fadeDirectionDown],
+[data-scroll-animation=fadeDirectionDown] {
+  .sssa-enabled & {
+    transform: translateY(-1rem);
+  }
+}
+
+[js-scroll-animation=fadeDirectionLeft],
+[data-scroll-animation=fadeDirectionLeft] {
+  .sssa-enabled & {
+    transform: translateX(1rem);
+  }
+}
+
+[js-scroll-animation=fadeDirectionRight],
+[data-scroll-animation=fadeDirectionRight] {
+  .sssa-enabled & {
+    transform: translateY(-1rem);
+  }
+}

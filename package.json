@@ -1,9 +1,8 @@
 {
   "name": "super-simple-scroll-animations",
   "description": "Intersection observer-based CSS scroll animations",
-  "version": "1.0.0",
-  "main": "dist/sssa.min.js",
-  "jsnext:main": "dist/sssa.esm.js",
+  "version": "1.0.1",
+  "main": "sssa.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

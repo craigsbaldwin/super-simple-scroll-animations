@@ -2,7 +2,7 @@
 
 SSSA uses intersection observers to detect when an element becomes visible, adding an `is-visible` class which triggers a CSS-powered animation. Optionally it can remove the class to trigger an exit animation.
 
-Its aim was to provide a lightweight, simple, and extensible approach to detecting when an element comes into view and animating it.
+Its aim was to provide a lightweight, dependency-free, and extensible approach to detecting when an element comes into view and animating it.
 
 ## Usage
 
@@ -13,7 +13,7 @@ Its aim was to provide a lightweight, simple, and extensible approach to detecti
 ```js
 import superSimpleScrollAnimations from 'super-simple-scroll-animations';
 
-superSimpleScrollAnimations(0.3, true).init();
+superSimpleScrollAnimations(0.3, false).init();
 ```
 
 SSSA accepts two parameters:
@@ -31,7 +31,7 @@ SSSA accepts two parameters:
   };
 </script>
 
-<script src="super-simple-scroll-animations.min.js"></script>
+<script src="sssa.min.js"></script>
 ```
 
 You will need to declare `window.sssa.threshold` and `window.sssa.enableExitAnimations` to change the defaults when using the script inline.

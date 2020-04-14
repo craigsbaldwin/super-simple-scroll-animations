@@ -12,7 +12,7 @@
    * DOM selectors.
    */
   const selectors = {
-    scrollElement: '[js-scroll-animation]',
+    scrollElement: '[js-sssa]',
   };
 
   /**

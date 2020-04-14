@@ -11,55 +11,55 @@
  * -- fadeDirectionRight
  *
  */
-[js-scroll-animation*=fade],
-[data-scroll-animation*=fade] {
+[js-sssa*=fade],
+[data-sssa*=fade] {
   .sssa-enabled & {
     opacity: 0;
     transition: opacity 0.6s cubic-bezier(0.42, 0, 0.58, 1);
   }
 }
 
-[js-scroll-animation*=fade].is-visible,
-.is-visible [data-scroll-animation*=fade] {
+[js-sssa*=fade].is-visible,
+.is-visible [data-sssa*=fade] {
   opacity: 1;
 }
 
-[js-scroll-animation*=fadeDirection],
-[data-scroll-animation*=fadeDirection] {
+[js-sssa*=fadeDirection],
+[data-sssa*=fadeDirection] {
   .sssa-enabled & {
     transition: opacity 0.6s cubic-bezier(0.42, 0, 0.58, 1), transform 0.6s cubic-bezier(0.42, 0, 0.58, 1);
   }
 }
 
-[js-scroll-animation*=fadeDirection].is-visible,
-.is-visible [data-scroll-animation*=fadeDirection] {
+[js-sssa*=fadeDirection].is-visible,
+.is-visible [data-sssa*=fadeDirection] {
   opacity: 1;
   transform: translate(0, 0);
 }
 
-[js-scroll-animation=fadeDirectionUp],
-[data-scroll-animation=fadeDirectionUp] {
+[js-sssa=fadeDirectionUp],
+[data-sssa=fadeDirectionUp] {
   .sssa-enabled & {
     transform: translateY(1rem);
   }
 }
 
-[js-scroll-animation=fadeDirectionDown],
-[data-scroll-animation=fadeDirectionDown] {
+[js-sssa=fadeDirectionDown],
+[data-sssa=fadeDirectionDown] {
   .sssa-enabled & {
     transform: translateY(-1rem);
   }
 }
 
-[js-scroll-animation=fadeDirectionLeft],
-[data-scroll-animation=fadeDirectionLeft] {
+[js-sssa=fadeDirectionLeft],
+[data-sssa=fadeDirectionLeft] {
   .sssa-enabled & {
     transform: translateX(1rem);
   }
 }
 
-[js-scroll-animation=fadeDirectionRight],
-[data-scroll-animation=fadeDirectionRight] {
+[js-sssa=fadeDirectionRight],
+[data-sssa=fadeDirectionRight] {
   .sssa-enabled & {
     transform: translateY(-1rem);
   }

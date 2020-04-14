@@ -2,6 +2,8 @@
 
 SSSA uses intersection observers to detect when an element becomes visible, adding an `is-visible` class which triggers a CSS-powered animation. Optionally it can remove the class to trigger an exit animation.
 
+Its aim was to provide a lightweight, simple, and extensible approach to detecting when an element comes into view and animating it.
+
 ## Usage
 
 ### JavaScript
@@ -36,19 +38,19 @@ You will need to declare `window.sssa.threshold` and `window.sssa.enableExitAnim
 
 ### HTML
 
-Elements you wish to be animated should have the attribute `js-scroll-animation` added. When an element with `js-scroll-animation` comes into view the `is-visible` class will be added to it.
+Elements you wish to be animated should have the attribute `js-sssa` added. When an element with `js-sssa` comes into view the `is-visible` class will be added to it.
 
 ```html
 <!-- Element will fade in when it passes the threshold -->
-<div class="foo" js-scroll-animation="fadeIn">
+<div class="foo" js-sssa="fadeIn">
   Lorem ipsum dolor sit amet...
 </div>
 
 <!-- Sub-elements will fade in when parent passes the threshold -->
-<ul class="foo" js-scroll-animation>
-  <li data-scroll-animation="fadeIn">Lorem ipsum dolor sit amet...</li>
-  <li data-scroll-animation="fadeIn">Lorem ipsum dolor sit amet...</li>
-  <li data-scroll-animation="fadeIn">Lorem ipsum dolor sit amet...</li>
+<ul class="foo" js-sssa>
+  <li data-sssa="fadeIn">Lorem ipsum dolor sit amet...</li>
+  <li data-sssa="fadeIn">Lorem ipsum dolor sit amet...</li>
+  <li data-sssa="fadeIn">Lorem ipsum dolor sit amet...</li>
 </ul>
 ```
 
@@ -59,12 +61,12 @@ To stagger the animations you will need to add a `transition-delay` property to 
 In the example below we use Vue; it's assumed you're using a templating language to handle iteration.
 
 ```html
-<ul js-scroll-animation>
+<ul js-sssa>
   <li
     v-for="(person, index) in people"
     :key="index"
     :style="`transition-delay: ${(0.15 * index)}s;`"
-    data-scroll-animation="fadeIn"
+    data-sssa="fadeIn"
   >
     {{ person }}
   </li>
@@ -88,14 +90,14 @@ Movement is achieved using `transform: translate()`. Properties are transitioned
 Simply add the below CSS for each custom animation you want, replacing `fade` and `opacity` with your own animation name and property to transition.
 
 ```css
-.sssa-enabled [js-scroll-animation=fade],
-.sssa-enabled [data-scroll-animation=fade] {
+.sssa-enabled [js-sssa=fade],
+.sssa-enabled [data-sssa=fade] {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-[js-scroll-animation=fade].is-visible,
-.is-visible [data-scroll-animation=fade] {
+[js-sssa=fade].is-visible,
+.is-visible [data-sssa=fade] {
   opacity: 1;
 }
 ```

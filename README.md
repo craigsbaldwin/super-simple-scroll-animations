@@ -1,4 +1,4 @@
-# Super Simple Scroll Animations
+# Super Simple Scroll Animations (SSSA)
 
 SSSA uses intersection observers to detect when an element becomes visible, adding an `is-visible` class which triggers a CSS-powered animation. Optionally it can remove the class to trigger an exit animation.
 
@@ -17,15 +17,22 @@ superSimpleScrollAnimations(0.3, true).init();
 SSSA accepts two parameters:
 
 * **threshold** - Decimal to indicate at what percentage of the target's visibility the observer's callback should be executed, default `0.3`
-* **detect exit** - When enabled it removes the `is-visible` when the element exits the viewport, default `false`
+* **enableExitAnimations** - When enabled it removes the `is-visible` when the element exits the viewport, default `false`
 
 #### Inline
 
 ```html
+<script>
+  window.sssa = {
+    threshold: 0.3,
+    enableExitAnimations: false,
+  };
+</script>
+
 <script src="super-simple-scroll-animations.min.js"></script>
 ```
 
-Using it inline the parameters will revert to their defaults.
+You will need to declare `window.sssa.threshold` and `window.sssa.enableExitAnimations` to change the defaults when using the script inline.
 
 ### HTML
 

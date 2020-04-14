@@ -10,8 +10,8 @@
     "scroll-animations"
   ],
   "license": "MIT",
-  "main": "dist/super-simple-scroll-animations.min.js",
-  "jsnext:main": "dist/super-simple-scroll-animations.js",
+  "main": "dist/sssa.min.js",
+  "jsnext:main": "dist/sssa.esm.js",
   "dependencies": {},
   "devDependencies": {},
   "repository": {

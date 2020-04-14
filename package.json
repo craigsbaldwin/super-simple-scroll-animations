@@ -1,7 +1,7 @@
 {
   "name": "super-simple-scroll-animations",
   "description": "Intersection observer-based CSS scroll animations",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "sssa.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,5 +21,5 @@
   "bugs": {
     "url": "https://github.com/csbrightside/super-simple-scroll-animations/issues"
   },
-  "homepage": "https://github.com/we-make-websites/branch-naming-check#readme"
+  "homepage": "https://github.com/csbrightside/super-simple-scroll-animations#readme"
 }

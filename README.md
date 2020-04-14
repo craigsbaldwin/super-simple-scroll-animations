@@ -1,5 +1,7 @@
 # Super Simple Scroll Animations (SSSA)
 
+![npm badge](https://img.shields.io/npm/v/super-simple-scroll-animations?style=flat-square "npm badge")
+
 SSSA uses intersection observers to detect when an element becomes visible, adding an `is-visible` class which triggers a CSS-powered animation. Optionally it can remove the class to trigger an exit animation.
 
 Its aim was to provide a lightweight, dependency-free, and extensible approach to detecting when an element comes into view and animating it.

@@ -79,6 +79,10 @@ In the example below we use Vue; it's assumed you're using a templating language
 
 The module comes with a set of default animations, the animation used is determined by the value of the attribute added to the element.
 
+```css
+@import '~super-simple-scroll-animations/css/sssa';
+```
+
 Movement is achieved using `transform: translate()`. Properties are transitioned using the CSS `transition` property. All transitions use `cubic-bezier(0.42, 0, 0.58, 1)` easing and a duration of `0.6s`.
 
 * `fadeIn` - Fades in.
@@ -103,6 +107,8 @@ Simply add the below CSS for each custom animation you want, replacing `fade` an
   opacity: 1;
 }
 ```
+
+The `.sssa-enabled` class is added to the `<body>` element on load ensuring that users with JavaScript disabled are not presented with invisible elements.
 
 ## Browser compatibility
 
